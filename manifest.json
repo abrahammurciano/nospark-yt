@@ -1,0 +1,27 @@
+{
+	"name": "NoSpark for YouTube",
+	"version": "1.0",
+	"description": "Disable NetSpark's YouTube filter.",
+	"manifest_version": 2,
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"*://www.google.com/external/j.php*",
+		"*://www.youtube.com/*",
+		"*://youtube.com/*",
+		"*://safepage.neto.net.il/*"
+	],
+	"background": {
+		"scripts": ["nospark-yt.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://safepage.neto.net.il/*"],
+			"js": ["back.js"]
+		},
+		{
+			"matches": ["*://youtube.com/*", "*://www.youtube.com/*"],
+			"css": ["nospark-yt.css"]
+		}
+	]
+}
