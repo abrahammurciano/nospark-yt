@@ -1,6 +1,6 @@
 {
 	"name": "NoSpark for YouTube",
-	"version": "1.0",
+	"version": "1.1",
 	"description": "Disable NetSpark's YouTube filter.",
 	"manifest_version": 2,
 	"permissions": [
